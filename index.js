@@ -33,9 +33,13 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-console.log(createMenuItem("pizza", 5, "lunch"))
-console.log(createMenuItem("pizza toast", 2, "breakfast"))
-console.log(createMenuItem("pizza rolls", 4, "dinner"))
+const pizza = createMenuItem("pizza", 5, "lunch")
+const pizza_toast = createMenuItem("pizza toast", 2, "breakfast")
+const pizza_rolls = createMenuItem("pizza rolls", 4, "dinner")
+
+console.log("Task 1b:", pizza)
+console.log("Task 1b:", pizza_toast)
+console.log("Task 1b:", pizza_rolls)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
@@ -85,7 +89,7 @@ Using the reviews array above:
 //   console.log(this.feedback)
 // }
 
-console.log(reviews[5].feedback)
+console.log("Task 3:",reviews[5].feedback)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -93,15 +97,14 @@ Using the reviews array above do the following: (no function needed)
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-const newReviews = [
+reviews.push(
   {name: "Cooper", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." },
   {name: "Josh", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."},
   {name: "Humza", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
   {name: "Murray", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
-  {name: "Anthony", rating: 4, feedback:"fun trivia and cool vibes"},
-]
+  {name: "Anthony", rating: 4, feedback:"fun trivia and cool vibes"})
 
-console.log(newReviews)
+console.log("Task 4:",reviews)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -142,13 +145,23 @@ Use the getLastReview function below to do the following:
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
 
-
 function getLastReview(array) {
   let obj = array[array.length - 1]
   return `${obj.name} gave the restaurant a ${obj.rating} star review, and their feedback was: ${obj.feedback}`
-} 
+}
 
 getLastReview(reviews)
+console.log("THIS IS WHAT WE'RE LOOKING FOR", getLastReview(reviews))
+
+
+
+
+// function getLastReview(array) {
+//   let obj = array[array.length - 1]
+//   return `${obj.name} gave the restaurant a ${obj.rating} star review, and their feedback was: ${obj.feedback}`
+// } 
+
+// getLastReview(reviews)
 
 
 
@@ -175,7 +188,7 @@ function getReviewByRating(array, rating) {
       newArray.push(array[i])
     }
   }
-  console.log(newArray)
+  console.log("Stretch 1:",newArray)
   return newArray
 }
 
@@ -202,7 +215,7 @@ function getLongReviews(array) {
       newArray.push(array[i])
     }
   }
-  console.log(newArray)
+  console.log("Stretch 2:",newArray)
   return newArray
 }
 
@@ -239,8 +252,8 @@ function carMaker(odometer) {
 }
 
 let newCar = carMaker(100)
-console.log(newCar)
-console.log(newCar.drive(50))
+console.log("Stretch 3:",newCar)
+console.log("Stretch 3:",newCar.drive(50))
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo(){
